@@ -1,13 +1,12 @@
 :root {
     --font1: 'Oswald', sans-serif;
     --font2: 'Martel', serif;
-    --fontSize1: 4.209rem;
-    --fontSize2: 3.157rem;
-    --fontSize3: 2.369rem;
-    --fontSize4: 1.777rem;
-    --fontSize5: 1.333rem;
-    --fontSize6: 1rem;
-    --fontSize7: 0.75rem;
+    --f1: 6.854rem;
+    --f2: 4.236rem;
+    --f3: 2.618rem;
+    --f4: 1.618rem;
+    --fbase: 1rem;
+    --fsmall: 0.618rem;
     --dark: #444144;
     --light: #F0F6F9;
     --primary: #93B4AB;
@@ -153,9 +152,6 @@ section.--hero {
 }
 
 .--hero .--content {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 78% 22%;
     grid-column: 2;
     grid-row: 2 / span 2;
 }
