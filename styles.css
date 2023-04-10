@@ -8,9 +8,9 @@
     --fbase: 1rem;
     --fsmall: 0.618rem;
     --dark: #444144;
-    --light: #F0F6F9;
+    --light: #F7FAF9;
     --primary: #93B4AB;
-    --accent1: #788BFF;
+    --accent1: #6873BA;
     --accent2: #E27E72;
     --altAccent1: #2EF0F0;
     --altAccent2: #C995DB;
@@ -33,7 +33,7 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
-    background-color: var(--light);
+    background-color: var(--dark);
     overflow-x: hidden;
 }
 
@@ -104,18 +104,42 @@ nav.--main-nav {
     right: 0;
     height: 51%;
     width: 5%;
-    background-color: var(--light);
+    background-color: var(--accent2);
 }
 
 /* Search and share */
 
-.--search-share {
+.--contact-share {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     position: absolute;
     right: 0;
     top: 0;
     height: 10%;
     width: 15%;
     background-color: var(--accent2);
+    border-bottom-left-radius: 2rem;
+}
+
+.--contact-share .--share-button {
+    position: relative;
+    height: auto;
+    min-width: 20%;
+}
+
+.--contact-share .--contact-button {
+    position: relative;
+    height: auto;
+    min-width: 20%;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 0.25rem solid var(--dark);
+    border-radius: 0.25rem;
+    color: var(--dark);
+    font-family: var(--font1);
+    font-size: var(--fbase);
 }
 
 /* Hero */
@@ -129,15 +153,36 @@ section.--hero {
 }
 
 .--hero .--logo-area-top {
+    position: relative;
     grid-column: 1 / span 2;
     grid-row: 1;
     background-color: var(--dark);
+    border-bottom-right-radius: 0.50rem;
+    overflow: hidden;
+}
+
+.--logo-area-top .--logo-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    color: var(--light);
+    text-align: center;
+    font-size: var(--f4);
+}
+
+.--logo-container img {
+    height: 80%;
+    object-fit: contain;
 }
 
 .--hero .--logo-area-top-right {
     grid-column: 3 / span 2;
     grid-row: 1;
     background-color: var(--light);
+    border-radius: 0.50rem;
 }
 
 .--hero .--logo-area-right {
@@ -149,6 +194,7 @@ section.--hero {
     grid-column: 1;
     grid-row: 1 / span 4;
     background-color: var(--dark);
+    border-radius: 0.50rem;
 }
 
 .--hero .--content {
@@ -167,5 +213,7 @@ section.--hero {
     left: 0;
     height: 50%;
     width: 40%;
-    background-color: var(--accent1);
+    background-color: var(--light);
+    border: 1rem solid var(--accent1);
+    border-radius: 0.50rem;
 }
