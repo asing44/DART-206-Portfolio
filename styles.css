@@ -109,7 +109,7 @@ nav {
 nav .--nav-link {
     position: relative;
     display: flex;
-    max-width: 33%;
+    max-width: 33.33%;
     align-items: end;
     justify-content: center;
     background-color: var(--primary);
@@ -230,34 +230,67 @@ header .--divider {
 }
 
 .--hero .--tagline {
-    position: absolute;
-    left: 17%;
-    bottom: 35vh;
+    position: fixed;
+    left: 17vw;
+    bottom: 25vh;
     color: var(--light);
+    z-index: 2;
 }
-v
-.--hero .--tagline h1 span {
-    padding: 0.50rem 1rem;
+
+.--tagline h1 {
+    margin: 0;
+}
+
+.--tagline h1 span {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
     color: var(--light);
-    font-size: clamp(100px, var(--f1), var(--f1));
+    font-size: clamp(100px, var(--f1), 109px);
     font-weight: 700;
 }
 
-.--hero .--tagline h1 span:first-of-type {
+.--tagline h1 span:first-of-type {
+    margin: 0;
     color: var(--dark);
 }
 
-.--hero .--tagline h1 span:nth-of-type(n+2) {
+.--tagline h1 span:nth-of-type(n+2) {
     background-color: var(--accent1);
 }
 
+.--tagline h1 span:last-of-type {
+    margin: 0;
+}
+
 .--hero .--main-right {
+    position: relative;
+    height: initial;
+    width: initial;
     grid-column: 3;
     grid-row: 2;
     background-color: var(--dark);
 }
 
 .--hero .--main-left {
+    position: relative;
+    height: initial;
+    width: initial;
     grid-column: 2;
     grid-row: 2;
+    overflow: hidden;
+}
+
+.--main-left .--accent-elements {
+    position: fixed;
+    height: 100%;
+    width: inherit;
+    overflow: hidden;
+}
+
+.--main-left .--accent-elements object {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: scale(1.2);
 }
