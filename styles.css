@@ -272,6 +272,12 @@ header .--divider {
     background-color: var(--dark);
 }
 
+.--main-right .--corner-wave {
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: screen;
+}
+
 .--hero .--main-left {
     position: relative;
     height: initial;
