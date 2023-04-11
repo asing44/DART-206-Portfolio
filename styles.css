@@ -94,6 +94,11 @@ button {
     cursor: pointer;
 }
 
+svg {
+    width: 100%;
+    height: 100%;
+}
+
 .--divider {
     border-radius: 1rem;
     background-color: var(--dark);
@@ -103,7 +108,7 @@ button {
     color: var(--accent2);
 }
 
-object.--button-arrow-SVG {
+.--svg-object.--arrow {
     cursor: pointer;
 }
 
@@ -195,17 +200,15 @@ div.--sticky-contact{
     font-size: var(--f3);
     font-weight: 600;
     cursor: pointer;
-    z-index: 2;
+    z-index: 1;
 }
 
-.--button-arrow-SVG {
+.--svg-object.--arrow.--contact-arrow {
     position: relative;
     height: 2.63rem;
-    width: 2.63rem;
-}
-
-.--button-arrow-SVG:hover svg defs style{
-    fill: teal;
+    width: auto;
+    cursor: pointer;
+    z-index: 2;
 }
 
 /* Hero */
