@@ -112,6 +112,11 @@ svg {
     cursor: pointer;
 }
 
+/* Animation objects */
+
+.--arrowSVG-container {
+    cursor: pointer;
+}
 
 /* Nav */
 
@@ -200,6 +205,7 @@ div.--sticky-contact{
     font-size: var(--f3);
     font-weight: 600;
     cursor: pointer;
+    overflow: hidden;
     z-index: 1;
 }
 

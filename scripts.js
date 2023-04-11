@@ -1,30 +1,29 @@
 // Buttons
 
-let arrowAnimation = document.querySelector(".--svg-object.--arrow.--contact-arrow")
+var contactArrowTimeline = gsap.timeline({paused: true, onComplete: function() {contactArrowTimeline.restart(); contactArrowTimeline.pause()}});
 
-var arrowTimeline = gsap.timeline();
+var contactArrow = document.querySelector(".--contact-arrow");
 
-let stickyContact = document.getElementsByClassName("--sticky-contact")[0];
-
-arrowTimeline.to(".--svg-object.--arrow.--contact-arrow", {
-    duration: 1,
+contactArrowTimeline.to(".--contact-arrow", {
+    duration: 0.75,
     x: 100,
     y: -100,
     ease: "back.in"
-}).to(".--svg-object.--arrow.--contact-arrow", {
-    duration: 1,
+}).to(".--contact-arrow", {
+    duration: 0,
+    x: -100,
+    y: 100,
+}).to(".--contact-arrow", {
+    duration: 0.75,
     x: 0,
     y: 0,
+    ease: "ease.out",
     ease: "back.out"
-});;
-
-stickyContact.addEventListener("mouseenter", () => {
-    arrowTimeline.play();
 });
 
-stickyContact.addEventListener("mouseleave", () => {
-    arrowTimeline.restart();
-});
+    contactArrow.addEventListener("mouseenter", function() {
+        contactArrowTimeline.play();
+    });
 
 // Hero
 
