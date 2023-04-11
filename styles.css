@@ -94,11 +94,19 @@ button {
     cursor: pointer;
 }
 
-.--divider {}
+.--divider {
+    border-radius: 1rem;
+    background-color: var(--dark);
+}
 
 .--inline-highlight {
     color: var(--accent2);
 }
+
+object.--button-arrow-SVG {
+    cursor: pointer;
+}
+
 
 /* Nav */
 
@@ -107,19 +115,27 @@ nav {
     display: flex;
     height: 100vh;
     width: 14vw;
+    flex-direction: row;
+    overflow-x: hidden;
     z-index: 2;
 }
 
 nav .--nav-link {
     position: relative;
     display: flex;
-    max-width: 33.33%;
+    flex: 1 1 auto;
     align-items: end;
     justify-content: center;
     background-color: var(--primary);
     color: var(--light);
     font-family: var(--font1);
     font-size: var(--f3);
+    cursor: pointer;
+    transition: flex 250ms ease-in-out;
+}
+
+nav .--nav-link:hover {
+    flex: 2 1 auto;
 }
 
 nav .--nav-link:nth-of-type(2) {
@@ -135,8 +151,6 @@ nav .--nav-link:nth-of-type(3) {
     display: flex;
     flex-direction: row;
     height: 100%;
-    padding: 0 1.44rem;
-    flex: 0 1 1;
     writing-mode: sideways-lr;
 }
 
@@ -169,18 +183,18 @@ div.--sticky-contact{
     align-items: center;
     justify-content: center;
     column-gap: 0.5rem;
-    top: 0.715rem;
-    right: 0.715rem;
-    height: 11vh;
+    top: 0;
+    right: 0;
+    height: 15vh;
     width: 14vw;
     min-width: fit-content;
-    padding: 1.94rem 2.63rem;
-    border-radius: 0.25rem;
+    padding: 1.69rem 2.31rem;
     background-color: var(--accent2);
     color: var(--light);
     font-family: var(--font1);
     font-size: var(--f3);
     font-weight: 600;
+    cursor: pointer;
     z-index: 2;
 }
 
@@ -188,6 +202,10 @@ div.--sticky-contact{
     position: relative;
     height: 2.63rem;
     width: 2.63rem;
+}
+
+.--button-arrow-SVG:hover svg defs style{
+    fill: teal;
 }
 
 /* Hero */
@@ -227,7 +245,7 @@ header .--logo {
 
 header .--divider {
     height: 0.31rem;
-    width: 83.75%;
+    width: 100%;
     grid-column: span 3;
     border-radius: 1rem;
     background-color: var(--dark);
@@ -283,22 +301,26 @@ header .--divider {
     width: 100%;
 }
 
-.--main-right .--corner-wave-1 {
-    position: absolute;
+.--animations .--corner-wave {
+    position: relative;
     top: 0;
     right: 0;
     height: 100%;
     width: 100%;
+}
+
+.--animations .--corner-wave svg g {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.--animations .--corner-wave.--wave-1 {
     mix-blend-mode: screen;
     opacity: 50%;
 }
 
-.--main-right .--corner-wave-2 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
+.--animations .--corner-wave.--wave-2 {
     mix-blend-mode: overlay;
     opacity: 20%;
 }
