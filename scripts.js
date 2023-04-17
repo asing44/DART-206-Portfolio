@@ -2,7 +2,7 @@
 
 var contactArrowTimeline = gsap.timeline({paused: true, onComplete: function() {contactArrowTimeline.restart(); contactArrowTimeline.pause()}});
 
-var contactArrow = document.querySelector(".--contact-arrow");
+var contactButton = document.querySelector(".--sticky-contact");
 
 contactArrowTimeline.to(".--contact-arrow", {
     duration: 0.75,
@@ -21,7 +21,7 @@ contactArrowTimeline.to(".--contact-arrow", {
     ease: "back.out"
 });
 
-    contactArrow.addEventListener("mouseenter", function() {
+    contactButton.addEventListener("mouseenter", function() {
         contactArrowTimeline.play();
     });
 
@@ -50,3 +50,5 @@ function mapNumbers(number, inMin, inMax, outMin, outMax) {
     return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
 
+var testLines = document.getElementsByClassName("--svg-object");
+console.log(testLines)

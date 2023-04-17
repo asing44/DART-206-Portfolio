@@ -1,0 +1,17 @@
+/* Hero main left */
+
+.--SVG.--lines {
+    animation: linesTest 1s infinite ease-in-out;
+}
+
+@keyframes linesTest {
+    from {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
