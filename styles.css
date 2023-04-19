@@ -7,13 +7,17 @@
     --f4: 1.618rem; /* 25.89px */
     --fbase: 1.25rem; /* 20.00px */
     --fsmall: 0.618rem; /* 12.25px */
+    --background: #FBEDDA;
     --dark: #444144;
     --light: #F7FAF9;
-    --primary: #93B4AB;
-    --accent1: #6873BA;
-    --accent2: #E27E72;
-    --altAccent1: #2EF0F0;
-    --altAccent2: #C995DB;
+    --accent1: #76AFB5;
+    --accent2: #6B9080;
+    --accent3: #6873BA;
+    --accent4: #3A5683;
+    --accent5: #E27E72;
+    --accent6: #E5625E;
+    --accent7: #2EF0F0;
+    --accent8: #C995DB;
 }
 
 /* Global */
@@ -37,7 +41,8 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--light);
+    background-color: var(--background);
+    color: var(--light);
     overflow-x: hidden;
 }
 
@@ -115,263 +120,98 @@ svg {
     color: var(--accent2);
 }
 
-.--svg-object.--arrow {
-    cursor: pointer;
-}
 
 /* Animation objects */
 
-.--arrowSVG-container {
-    cursor: pointer;
+
+/* Hero */
+
+section.--hero {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
-/* Nav */
+/* Hero nav */
 
 nav {
     position: absolute;
     display: flex;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
     height: 100vh;
-    width: 14vw;
-    flex-direction: row;
-    overflow-x: hidden;
     z-index: 2;
 }
 
 nav .--nav-link {
     position: relative;
     display: flex;
-    flex: 1 1 auto;
     align-items: end;
     justify-content: center;
-    background-color: var(--primary);
-    color: var(--light);
-    font-family: var(--font1);
-    font-size: var(--f3);
-    cursor: pointer;
-    transition: flex 250ms ease-in-out;
+    width: 5.625vw;
+    flex: 1 1 auto;
+    border: 5px solid var(--dark);
+    box-sizing: content-box;
 }
 
 nav .--nav-link:hover {
-    flex: 2 1 auto;
+    /* flex: 2 1 auto; */
 }
 
-nav .--nav-link:nth-of-type(2) {
-    background-color: var(--accent1);
-}
-
-nav .--nav-link:nth-of-type(3) {
-    background-color: var(--altAccent2);
-}
-
-.--nav-link div {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    writing-mode: sideways-lr;
-}
-
-.--nav-link div span {
-    min-height: 186px; 
-    align-self: baseline;
-    padding-bottom: 3.94rem;
-}
-
-.--nav-link div object {
-    height: 2.63rem;
-    width: 2.63rem;
-    transform: rotate(-90deg);
-    margin-bottom: clamp(1.69rem, 1.69rem, 1.69rem);
-}
-
-.--nav-link div object:first-of-type {
-    margin-bottom: clamp(1.69rem, 3.25rem, 3.25rem);
-}
-
-.--nav-link div object:last-of-type {
-    margin-bottom: clamp(1.69rem, 2.31rem, 3.25rem);
-}
-
-/* Contact button */
-
-div.--sticky-contact{
-    position: absolute;
-    display: flex;
-    top: 2rem;
-    right: 2rem;
-    height: 7.7vh;
-    min-width: fit-content;
-    padding: 0 1.27rem;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0.5rem;
-    background-color: var(--accent2);
+.--nav-link p {
+    width: 1px;
     color: var(--light);
     font-family: var(--font1);
-    font-size: var(--f3);
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.--svg-object.--arrow.--contact-arrow {
-    position: relative;
-    height: 2.63rem;
-    width: auto;
-    cursor: pointer;
-    z-index: 2;
-}
-
-/* Hero */
-
-section.--hero {
-    display: grid;
-    grid-template-columns: 14% 43% 43%;
-    grid-template-rows: 15% 85%;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--light);
-}
-
-section.--hero header {
-    position: relative;
-    display: grid;
-    grid-template-columns: 14% 43% 43%;
-    grid-column: 1 / span 3;
-    grid-row: 1;
-    background-color: var(--light);
-}
-
-header .--logo {
-    position: relative;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: end;
-    grid-column: 2;    
-    overflow: hidden;
-} 
-
-.--logo object {
-    position: relative;
-    height: 64%;
-}
-
-header .--divider {
-    height: 0.31rem;
-    width: 100%;
-    grid-column: span 3;
-    border-radius: 0;
-    background-color: var(--dark);
-}
-
-.--hero .--tagline {
-    position: fixed;
-    left: 17vw;
-    bottom: 25vh;
-    color: var(--light);
-    z-index: 2;
-}
-
-.--tagline h1 {
-    margin: 0;
-}
-
-.--tagline h1 span {
-    display: block;
-    margin-bottom: 1rem;
-    padding: 0 1rem;
-    color: var(--light);
-    font-size: clamp(100px, var(--f1), 109px);
-    font-weight: 700;
-}
-
-.--tagline h1 span:first-of-type {
-    margin: 0;
-    color: var(--dark);
-}
-
-.--tagline h1 span:nth-of-type(n+2) {
-    background-color: var(--accent1);
-}
-
-.--tagline h1 span:last-of-type {
-    margin: 0;
-}
-
-.--hero .--main-right {
-    position: relative;
-    height: initial;
-    width: initial;
-    grid-column: 3;
-    grid-row: 2;
-    background-color: var(--dark);
-    overflow: hidden;
-}
-
-.--main-right .--animations {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-.--animations .--corner-wave {
-    position: relative;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.--animations .--corner-wave svg g {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.--animations .--corner-wave.--wave-1 {
-    mix-blend-mode: screen;
-    opacity: 50%;
-}
-
-.--animations .--corner-wave.--wave-2 {
-    mix-blend-mode: overlay;
-    opacity: 20%;
-}
-
-.--main-right .--content {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    max-width: 65%;
-    color: var(--light);
-}
-
-.--content p {
-    max-width: 85%;
     font-size: var(--f4);
+    text-align: end;
+    line-height: 0;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
 }
 
-.--hero .--main-left {
-    position: relative;
-    height: initial;
-    width: initial;
-    grid-column: 2;
-    grid-row: 2;
-    overflow: hidden;
+nav .--about {
+    background-color: var(--accent4);
+    border-right-width: 2.5px;
 }
 
-.--main-left .--accent-elements {
-    position: fixed;
-    height: 100%;
-    width: inherit;
-    overflow: hidden;
+nav .--work {
+    background-color: var(--accent6);
+    border-width: 5px 2.5px;
 }
 
-.--main-left .--accent-elements object {
+nav .--home {
+    background-color: var(--accent2);
+    border-left-width: 2.5px;
+}
+
+/* Hero main */
+
+main.--hero-main {
     position: relative;
     height: 100%;
     width: 100%;
-    transform: scale(1.2);
 }
+
+.--hero-main section {
+    float: left;
+}
+
+.--hero-main .--right {
+    height: 100%;
+    width: 40.21%;
+    background-color: var(--dark);
+}
+
+.--hero-main .--left {
+    height: 100%;
+    width: 59.79%;
+}
+
+.--left .--tagline {
+    position: absolute;
+    display: flex;
+}
+
+/* <--/--> */
+

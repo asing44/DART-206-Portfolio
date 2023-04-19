@@ -1,54 +1,54 @@
-// Buttons
+// // Buttons
 
-var contactArrowTimeline = gsap.timeline({paused: true, onComplete: function() {contactArrowTimeline.restart(); contactArrowTimeline.pause()}});
+// var contactArrowTimeline = gsap.timeline({paused: true, onComplete: function() {contactArrowTimeline.restart(); contactArrowTimeline.pause()}});
 
-var contactButton = document.querySelector(".--sticky-contact");
+// var contactButton = document.querySelector(".--sticky-contact");
 
-contactArrowTimeline.to(".--contact-arrow", {
-    duration: 0.75,
-    x: 100,
-    y: -100,
-    ease: "back.in"
-}).to(".--contact-arrow", {
-    duration: 0,
-    x: -100,
-    y: 100,
-}).to(".--contact-arrow", {
-    duration: 0.75,
-    x: 0,
-    y: 0,
-    ease: "ease.out",
-    ease: "back.out"
-});
+// contactArrowTimeline.to(".--contact-arrow", {
+//     duration: 0.75,
+//     x: 100,
+//     y: -100,
+//     ease: "back.in"
+// }).to(".--contact-arrow", {
+//     duration: 0,
+//     x: -100,
+//     y: 100,
+// }).to(".--contact-arrow", {
+//     duration: 0.75,
+//     x: 0,
+//     y: 0,
+//     ease: "ease.out",
+//     ease: "back.out"
+// });
 
-    contactButton.addEventListener("mouseenter", function() {
-        contactArrowTimeline.play();
-    });
+//     contactButton.addEventListener("mouseenter", function() {
+//         contactArrowTimeline.play();
+//     });
 
-// Hero
+// // Hero
 
-var heroMainRightWave1 = lottie.loadAnimation({
-    container: document.getElementsByClassName("--wave-1")[0],
-    renderer: "svg",
-    autoplay: true,
-    loop: true,
-    path: "JSON/heroRightMainWave.json",
-});
+// var heroMainRightWave1 = lottie.loadAnimation({
+//     container: document.getElementsByClassName("--wave-1")[0],
+//     renderer: "svg",
+//     autoplay: true,
+//     loop: true,
+//     path: "JSON/heroRightMainWave.json",
+// });
 
-var heroMainRightWave2 = lottie.loadAnimation({
-    container: document.getElementsByClassName("--wave-2")[0],
-    renderer: "svg",
-    autoplay: true,
-    loop: true,
-    path: "JSON/heroRightMainWave2.json",
-});
+// var heroMainRightWave2 = lottie.loadAnimation({
+//     container: document.getElementsByClassName("--wave-2")[0],
+//     renderer: "svg",
+//     autoplay: true,
+//     loop: true,
+//     path: "JSON/heroRightMainWave2.json",
+// });
 
-heroMainRightWave1.setSpeed(0.5);
-heroMainRightWave2.setSpeed(0.25);
+// heroMainRightWave1.setSpeed(0.5);
+// heroMainRightWave2.setSpeed(0.25);
 
-function mapNumbers(number, inMin, inMax, outMin, outMax) {
-    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-}
+// function mapNumbers(number, inMin, inMax, outMin, outMax) {
+//     return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+// }
 
-var testLines = document.getElementsByClassName("--svg-object");
-console.log(testLines)
+// var testLines = document.getElementsByClassName("--svg-object");
+// console.log(testLines)
