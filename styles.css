@@ -9,6 +9,7 @@
     --fsmall: 0.618rem; /* 12.25px */
     --paddingTB1: 4.8vh;
     --paddingRL1: 1.72vw;
+    --borderSize1: 0.5vw;
     --background: #FBEDDA;
     --dark: #444144;
     --light: #F7FAF9;
@@ -225,10 +226,13 @@ main.--hero-main {
 }
 
 .--tagline h1 span {
-    display: block;
+    position: relative;
+    display: flex;
+    align-items: center;
     height: 17.13vh;
     padding: 0 var(--paddingRL1);
     background-color: var(--accent4);
+    z-index: 1;
 }
 
 .--tagline h1 span:first-of-type {
@@ -242,6 +246,20 @@ main.--hero-main {
 
 .--tagline h1 span:nth-of-type(n + 2) {
     margin-top: 2.7vh;
+    border: var(--borderSize1) solid var(--dark);
+}
+
+.--unforgettable::after, .--design::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: -10%;
+    height: 17.13vh;
+    width: 100%;
+    padding: 0 var(--paddingRL1);
+    background-color: var(--dark);
+    z-index: -1;
 }
 
 /* <--/--> */
