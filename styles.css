@@ -7,6 +7,8 @@
     --f4: 1.618rem; /* 25.89px */
     --fbase: 1.25rem; /* 20.00px */
     --fsmall: 0.618rem; /* 12.25px */
+    --paddingTB1: 4.8vh;
+    --paddingRL1: 1.72vw;
     --background: #FBEDDA;
     --dark: #444144;
     --light: #F7FAF9;
@@ -15,7 +17,7 @@
     --accent3: #6873BA;
     --accent4: #3A5683;
     --accent5: #E27E72;
-    --accent6: #E5625E;
+    --accent6: #CC6666;
     --accent7: #2EF0F0;
     --accent8: #C995DB;
 }
@@ -54,7 +56,7 @@ h1, h2, h3, h4 {
 h1 {
     margin-top: 0;
     margin-bottom: 1.2rem;
-    font-size: var(--f1);
+    font-size: var(--f2);
     font-weight: 600;
   }
   
@@ -151,7 +153,7 @@ nav .--nav-link {
     justify-content: center;
     width: 5.625vw;
     flex: 1 1 auto;
-    border: 5px solid var(--dark);
+    border: 0.5vw solid var(--dark);
     box-sizing: content-box;
 }
 
@@ -166,23 +168,24 @@ nav .--nav-link:hover {
     font-size: var(--f4);
     text-align: end;
     line-height: 0;
+    letter-spacing: -1vh;
     writing-mode: vertical-lr;
     text-orientation: upright;
 }
 
 nav .--about {
     background-color: var(--accent4);
-    border-right-width: 2.5px;
+    border-right-width: 0.25vw;
 }
 
 nav .--work {
     background-color: var(--accent6);
-    border-width: 5px 2.5px;
+    border-width: 0.5vw 0.25vw;
 }
 
 nav .--home {
     background-color: var(--accent2);
-    border-left-width: 2.5px;
+    border-left-width: 0.25vw;
 }
 
 /* Hero main */
@@ -204,13 +207,41 @@ main.--hero-main {
 }
 
 .--hero-main .--left {
+    position: relative;
     height: 100%;
     width: 59.79%;
 }
 
 .--left .--tagline {
-    position: absolute;
+    position: absolute ;
+    top: 21.85vh;
+    left: 22.76vw;
     display: flex;
+    font-size: var(--f2);
+}
+
+.--left .--tagline h1 {
+    margin: 0;
+}
+
+.--tagline h1 span {
+    display: block;
+    height: 17.13vh;
+    padding: 0 var(--paddingRL1);
+    background-color: var(--accent4);
+}
+
+.--tagline h1 span:first-of-type {
+    background-color: transparent;
+    color: var(--dark);
+}
+
+.--tagline h1 span:nth-of-type(3) {
+    background-color: var(--accent6);
+}
+
+.--tagline h1 span:nth-of-type(n + 2) {
+    margin-top: 2.7vh;
 }
 
 /* <--/--> */
