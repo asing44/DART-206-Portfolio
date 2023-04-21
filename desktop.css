@@ -265,24 +265,31 @@ main.--hero-main {
 }
 
 .--left .--tagline {
-    position: absolute ;
+    position: absolute;
     top: 21.85vh;
     left: 22.76vw;
-    display: flex;
+    height: 55.83%;
+    width: 85%;
     font-size: var(--f2);
-    z-index: 2 ;
+    z-index: 2;
 }
 
 .--left .--tagline h1 {
+    position: relative;
+    display: flex;
+    height: 100%; 
+    flex-direction: column;
+    row-gap: 4.48%;
     margin: 0;
+    font-size: clamp(2.4rem, 4.5vw + 0.3rem, 4.236rem);
 }
 
 .--tagline h1 span {
     position: relative;
     display: flex;
     align-items: center;
-    height: 17.13vh;
-    padding: 0 var(--paddingRL1);
+    flex: 1;
+    padding: 2.5% var(--paddingRL1);
     background-color: var(--accent4);
 }
 
@@ -296,7 +303,6 @@ main.--hero-main {
 }
 
 .--tagline h1 span:nth-of-type(n + 2) {
-    margin-top: 2.7vh;
     border: var(--borderSize1) solid var(--dark);
 }
 
