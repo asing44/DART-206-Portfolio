@@ -208,14 +208,54 @@ main.--hero-main {
 .--hero-right-blue-triangle {
     position: absolute;
     height: 100%;
+    width: 52.83%;
     top: 0;
-    left: -12.55%;
+    left: 0;
+    background-color: var(--accent1);
+    border: var(--borderSize1) solid var(--dark);
+    clip-path: content-box polygon(0% 0%, 0% 100%, 100% 100%);
+    z-index: 2;
 }
 
-.--hero-right-blue-triangle img {
+.--right #triangle_main_container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 9%;
+    top: 24.26%;
+    left: calc((-1) * (15.68% - 5px));
+    height: 12.69%;
+    width: 15.68%;
+    z-index: 3;
+}
+
+.--right .--triangle-main-rectangle {
+    position: relative;
+    flex: 1;
+    background-color: var(--accent1);
+}
+
+.--triangle-main-rectangle#triangle_rectangle_2 {
+    width: 74.49%;
+    align-self: end;
+}
+
+.--triangle-main-rectangle#triangle_rectangle_1 {
+    width: 49.58%;
+    align-self: end;
+}
+
+.--right .--triangle-main-rectangle::after {
+    position: absolute;
     display: block;
+    content: "";
     height: 100%;
     width: 100%;
+    border: var(--borderSize1) solid var(--dark);
+    border-right-width: 0;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 .--hero-main .--left {
