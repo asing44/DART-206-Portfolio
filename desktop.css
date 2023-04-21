@@ -129,6 +129,7 @@ section.--hero {
     position: relative;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 /* Hero nav */
@@ -140,7 +141,7 @@ nav {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 19.2vw;
+    width: 17vw;
     z-index: 2;
 }
 
@@ -266,6 +267,18 @@ main.--hero-main {
     width: 59.79%;
 }
 
+.--left .--logo-container {
+    position: relative;
+    height: 17vh;
+}
+
+.--logo-container img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 16.77%;
+}
+
 .--left .--tagline {
     position: absolute;
     top: 21.85vh;
@@ -320,6 +333,89 @@ main.--hero-main {
     border-bottom-width: 1.39vw;
     background-color: var(--dark);
     z-index: -1;
+}
+
+.--left .--hero-SVG-elements {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 70%;
+}
+
+.--hero-SVG-elements .--hero-SVG-elements-container {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 1.5%;
+}
+
+.--hero-SVG-elements-container svg {
+    position: relative;
+}
+
+.--hero-circles {
+    display: grid;
+    grid-template-rows: 35%  32.47% 1fr;
+    align-self: end;
+    height: 42vh;
+}
+
+.--hero-pillar-circle {
+    height: 7vh;
+    width: 7vh;
+    margin-left: -4vh;
+    border-radius: 50%;
+    background-color: var(--dark);
+}
+
+.--hero-pillar-circle.--1 {
+    grid-area: 1 / 1;
+}
+
+.--hero-pillar-circle.--2 {
+    grid-area: 2 / 1;
+    align-self: flex-end;
+}
+
+.--hero-pillar-circle.--base {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    height: 14vh;
+    width: 14vh;
+    margin: 0;
+    grid-area: 3 / 1;
+    border-radius: 0;
+    border-top-right-radius: 100%;
+}
+
+.--pillar-base-circle {
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    background-color: var(--accent1);
+}
+
+.--pillar-base-circle.--2 {
+    background-color: var(--accent3);
+}
+
+.--pillar-base-circle.--3 {
+    background-color: var(--accent6);
+}
+
+.--horizontal-circles-container {
+    display: flex;
+    bottom: 0;
+}
+
+.--horizontal-circle.--1 {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background-color: white;
 }
 
 /* <--/--> */
