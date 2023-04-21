@@ -9,7 +9,7 @@
     --fsmall: 0.618rem; /* 12.25px */
     --paddingTB1: 4.8vh;
     --paddingRL1: 1.72vw;
-    --borderSize1: 0.5vw;
+    --borderSize1: 5px;
     --background: #FBEDDA;
     --dark: #444144;
     --light: #F7FAF9;
@@ -109,11 +109,6 @@ button {
     cursor: pointer;
 }
 
-svg {
-    width: 100%;
-    height: 100%;
-}
-
 .--divider {
     border-radius: 1rem;
     background-color: var(--dark);
@@ -154,7 +149,7 @@ nav .--nav-link {
     align-items: end;
     justify-content: center;
     flex: 1;
-    border: 0.5vw solid var(--dark);
+    border: var(--borderSize1) solid var(--dark);
     box-sizing: content-box;
     transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
@@ -177,17 +172,17 @@ nav .--nav-link:hover {
 
 nav .--about {
     background-color: var(--accent4);
-    border-right-width: 0.25vw;
+    border-right-width: 2.5px;
 }
 
 nav .--work {
     background-color: var(--accent6);
-    border-width: 0.5vw 0.25vw;
+    border-width: 5px 2.5px; 
 }
 
 nav .--home {
     background-color: var(--accent2);
-    border-left-width: 0.25vw;
+    border-left-width: 2.5px;
 }
 
 /* Hero main */
@@ -203,9 +198,24 @@ main.--hero-main {
 }
 
 .--hero-main .--right {
+    position: relative;
     height: 100%;
     width: 40.21%;
     background-color: var(--dark);
+    z-index: 1;
+}
+
+.--hero-right-blue-triangle {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -12.55%;
+}
+
+.--hero-right-blue-triangle img {
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .--hero-main .--left {
@@ -220,6 +230,7 @@ main.--hero-main {
     left: 22.76vw;
     display: flex;
     font-size: var(--f2);
+    z-index: 2 ;
 }
 
 .--left .--tagline h1 {
