@@ -294,8 +294,8 @@ nav .--home {
     z-index: 1;
 }
 
-.--right .--blue-triangle {
-    position: absolute;
+.--hero-right-SVG-container .--hero-right-SVG {
+    position: relative;
     height: 100%;
     left: -16%;
     bottom: 0;
