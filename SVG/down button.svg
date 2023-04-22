@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="135.7" height="135.7" viewBox="0 0 135.7 135.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #444144;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        fill: #6b9080;
+      }
+
+      .cls-3 {
+        fill: #444144;
+      }
+
+      .cls-4 {
+        fill: #02728a;
+      }
+
+      .cls-5 {
+        fill: #e5625e;
+      }
+
+      .cls-6 {
+        fill: #fbedda;
+      }
+    </style>
+  </defs>
+  <g id="Landing_-_Hero" data-name="Landing - Hero">
+    <g>
+      <path class="cls-6" d="m69.47,4.61c-.54-.01-1.08-.04-1.62-.04C32.96,4.57,4.57,32.96,4.57,67.85s28.39,63.28,63.28,63.28c.54,0,1.08-.03,1.62-.04,34.14-.87,61.66-28.89,61.66-63.24S103.62,5.48,69.47,4.61Z"/>
+      <polygon class="cls-3" points="28.65 77.65 67.85 116.85 107.05 77.65 28.65 77.65"/>
+      <polygon class="cls-4" points="87.45 87.45 48.25 87.45 67.85 107.05 87.45 87.45"/>
+      <polygon class="cls-3" points="28.65 58.05 67.85 97.25 107.05 58.05 28.65 58.05"/>
+      <polygon class="cls-5" points="87.45 67.85 48.25 67.85 67.85 87.45 87.45 67.85"/>
+      <polygon class="cls-3" points="28.65 38.45 67.85 77.65 107.05 38.45 28.65 38.45"/>
+      <polygon class="cls-2" points="87.45 48.25 48.25 48.25 67.85 67.85 87.45 48.25"/>
+      <circle class="cls-1" cx="67.85" cy="67.85" r="65.35"/>
+    </g>
+  </g>
+</svg>
