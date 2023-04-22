@@ -1,12 +1,13 @@
 :root {
     --font1: 'Rubik', sans-serif;
     --font2: 'PT Sans Caption', sans-serif;
-    --f1: 6.854rem; /* 109.66px */
-    --f2: 4.236rem; /* 67.77px */
-    --f3: 2.618rem; /* 41.89px */
-    --f4: 1.618rem; /* 25.89px */
-    --fbase: 1.25rem; /* 20.00px */
-    --fsmall: 0.618rem; /* 12.25px */
+    --f1: clamp(6.85rem, calc(6.85rem + 0.00vw), 6.85rem);/* 109.66px → 137.07px */
+    --f2: clamp(4.24rem, calc(4.24rem + 0.00vw), 4.24rem); /* 67.77px → 84.72px */
+    --f3: clamp(2.62rem, calc(2.39rem + 1.14vw), 3.27rem);
+    /* 41.89px → 52.36px */
+    --f4: clamp(1.62rem, calc(1.62rem + 0.00vw), 1.62rem); /* 25.89px → 32.36px */
+    --fbase: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem); /* 16.00px → 20.00px */
+    --fsmall: clamp(0.62rem, calc(0.56rem + 0.27vw), 0.77rem); /* 9.89px → 12.36px */
     --paddingTB1: 4.8vh;
     --paddingRL1: 1.72vw;
     --borderSize1: 10px;
@@ -33,7 +34,8 @@
 html {
     height: 100%;
     width: 100%;
-    font-size: clamp(1.25em, .4167vw + .8875em, 1.125em);
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
     font-family: 'PT Sans Caption', sans-serif;
     line-height: 1.75;
     scroll-behavior: smooth;
@@ -58,7 +60,7 @@ h1, h2, h3, h4 {
 h1 {
     margin-top: 0;
     margin-bottom: 1.2rem;
-    font-size: var(--f2);
+    font-size: var(--f1);
     font-weight: 600;
   }
   
@@ -122,6 +124,17 @@ button {
 
 /* Media breakpoints */
 
+@media (min-width: 48em) {
+    :root {
+      font-size: calc(1rem + ((1vw - 0.48rem) * 0.6944));
+      min-height: 0vw;
+    }
+  }
+  @media (min-width: 120em) {
+    :root {
+      font-size: 1.5rem;
+    }
+  }
 
 /* Hero */
 
@@ -137,7 +150,7 @@ section.--hero {
 main.--hero-main {
     position: relative;
     display: grid;
-    grid-template-columns: 57% 43%;
+    grid-template-columns: 60% 40%;
     height: 100vh;
     width: 100%;
 }
@@ -161,20 +174,20 @@ main.--hero-main {
     top: 0;
     left: 0;
     background-color: var(--accent1);
-    border: var(--borderSize2) solid var(--dark);
+    border: var(--borderSize1) solid var(--dark);
     clip-path: content-box polygon(0% 0%, 0% 100%, 100% 100%);
     z-index: 2;
 }
 
-.--right #triangle_main_container {
+.--right #triangle_rectangles_main_container {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     row-gap: 9%;
-    top: 24.26%;
-    left: calc((-1) * (15.68% - 5px));
-    height: 12.69%;
+    top: 19%;
+    left: calc((-1) * (15.68% - 10px));
+    height: 20%;
     width: 15.68%;
     z-index: 3;
 }
@@ -201,7 +214,7 @@ main.--hero-main {
     content: "";
     height: 100%;
     width: 100%;
-    border: var(--borderSize2) solid var(--dark);
+    border: var(--borderSize1) solid var(--dark);
     border-right-width: 0;
     box-sizing: border-box;
     z-index: 1;
@@ -284,10 +297,11 @@ section.--left-right {
 }
 
 .--left-right .--tagline {
+    position: absolute;
     height: 59%;
     width: 121%;
-    grid-area: 2 / 2;
-    font-size: var(--f2);
+    left: 11%;
+    bottom: 22.50%;
     z-index: 2;
 }
 
@@ -296,45 +310,10 @@ section.--left-right {
     display: flex;
     height: 100%; 
     flex-direction: column;
-    row-gap: 4.48%;
+    align-items: flex-start;
+    justify-content: space-around;
     margin: 0;
-    font-size: clamp(2.4rem, 4.5vw + 0.3rem, 4.236rem);
-}
-
-.--tagline h1 span {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex: 1;
-    padding: 2.5% var(--paddingRL1);
-    background-color: var(--accent4);
-}
-
-.--tagline h1 span:first-of-type {
-    background-color: transparent;
-    color: var(--dark);
-}
-
-.--tagline h1 span:nth-of-type(3) {
-    background-color: var(--accent6);
-}
-
-.--tagline h1 span:nth-of-type(n + 2) {
-    border: var(--borderSize2) solid var(--dark);
-}
-
-.--unforgettable::after, .--design::after {
-    position: absolute;
-    display: block;
-    content: "";
-    top: -0.5vw;
-    right: -0.5vw;
-    height: 114%;
-    width: 103%;
-    border-left-width: 1.39vw;
-    border-bottom-width: 1.39vw;
-    background-color: var(--dark);
-    z-index: -1;
+    line-height: 1;
 }
 
 .--left-right .--hero-SVG-elements-1 {
@@ -345,8 +324,8 @@ section.--left-right {
 }
 
 .--hero-SVG-elements-1 svg {
+    position: relative;
     display: block;
-    height: 75.65%;
     width: 100%;
 }
 
