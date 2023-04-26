@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="hero-down-arrow" data-name="hero-down-arrow" xmlns="http://www.w3.org/2000/svg" width="28.14" height="39.87" viewBox="0 0 28.14 39.87">
+  <defs>
+    <style>
+      .uuid-653aac34-5f6d-4e6d-8d10-26693c293fb2 {
+        fill: #12754a;
+        stroke: #444144;
+        stroke-miterlimit: 10;
+        stroke-width: 1.61px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-1ab78230-8824-45a4-8f64-2f7052411b33" data-name="Landing - Hero">
+    <polygon class="uuid-653aac34-5f6d-4e6d-8d10-26693c293fb2" points="19.13 19.4 19.13 .81 9 .81 9 19.4 1.5 19.4 14.07 38.4 26.63 19.4 19.13 19.4"/>
+  </g>
+</svg>

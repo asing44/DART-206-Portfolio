@@ -1,9 +1,9 @@
 :root {
     --font1: 'Rubik', sans-serif;
     --font2: 'PT Sans Caption', sans-serif;
-    --fs4: 6.85rem; /* 137px */
-    --fs3: 4.25rem; /* 85px */
-    --fs2: 2.6rem; /* 52px */
+    --fs4: 5.1375rem; /* 102.75px */
+    --fs3: 4.40rem; /* 88px */
+    --fs2: 2.72rem; /* 54px */
     --fs1: 1.6rem; /* 32px */
     --fs0: 1rem; /* 20px */
     --fs-1: 0.85rem; /* 17px */
@@ -18,6 +18,7 @@
     --a2: #F4AC45;
 
     --b4: 0.26rem;
+    --b1: 0.1615rem;
 }
 
 /* Global */
@@ -42,29 +43,29 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background);
-    color: var(--light);
+    color: var(--dark);
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
     font-family: var(--font1);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 h1 {
-    margin-top: 1.75rem;
-    margin-bottom: 3.5rem;
-    line-height: 7rem;
+    margin-top: 1.73rem;
+    margin-bottom: 2.5rem;
+    line-height: 5.8rem;
     font-size: var(--fs4);
-    font-weight: 800;
+    font-weight: 700;
   }
   
 h2 {
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
-    line-height: 5.25rem;
+    margin-top: 1.76rem;
+    margin-bottom: 1.76rem;
+    line-height: 5.29rem;
     font-size: var(--fs3);
-    font-weight: 700;
+    font-weight: 500;
 }
   
 h3 {
@@ -131,6 +132,10 @@ a, input, fieldset {
 
 a, input, button {
     cursor: pointer;
+}
+
+button {
+    padding: 0;
 }
 
 
@@ -209,5 +214,84 @@ main.hero-main {
     color: var(--dark);
 }
 
+.hero-left {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    grid-area: 2 / 1;
+}
 
+.hero-content {
+    position: relative;
+    height: 57.35%;
+    max-width: 65.38%;
+    top: 4.78%;
+    left: 11.43%;
+}
 
+.hero-content h1 {
+    margin-top: 0;
+    color: var(--pr);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+
+.hero-buttons button {
+    position: relative;
+    height: 2.6rem;
+    background-color: transparent;
+    border: var(--b1) solid var(--dark);
+    font-size: var(--fs0);
+    color: var(--light);
+}
+
+.hero-buttons button::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--b1));
+    right: calc(-1 * var(--b1));
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: var(--b1) solid var(--dark);
+    border-top-width: 0;
+    border-right-width: 0;
+    transform: 
+        scaleX(1.13)
+        scaleY(1.3);
+    transform-origin: top right;
+}
+
+.hero-buttons button.contact {
+    width: 8.7rem;
+    background-color: var(--dh);
+    border-radius: 5%;
+    transition: all 250ms ease-in-out;
+}
+
+.hero-buttons button.contact::after {
+    transform: 
+        scaleX(1.08)
+        scaleY(1.3);
+}
+
+.hero-buttons button.contact:hover {
+    background-color: var(--light);
+    color: var(--dh)
+}
+
+.hero-buttons button.down-arrow {
+    display: flex;
+    width: 5.35rem;
+    margin-right: 8.62%;
+    align-items: center;
+    justify-content: center;
+}
