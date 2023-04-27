@@ -136,10 +136,22 @@ a, input, button {
 
 button {
     padding: 0;
+    overflow: hidden;
 }
 
 
 /* Media breakpoints */
+
+/* Button animations */
+
+.btna1-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--light);
+    transform-origin: center;
+}
 
 /* Cursor */
 
@@ -284,7 +296,6 @@ main.hero-main {
 }
 
 .hero-buttons button.contact:hover {
-    background-color: var(--light);
     color: var(--dh)
 }
 

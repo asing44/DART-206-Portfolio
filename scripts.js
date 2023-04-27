@@ -61,33 +61,27 @@ onmousemove = function(e){
     mY = e.clientY;
 }
 
-const btn_anim_1 = document.querySelectorAll("button");
-const btn_anim_1_inner = document.createElement("div");
-btn_anim_1_inner.classList.add("btna1-inner");
+const btn_elements = document.querySelectorAll("button");
 
-btn_anim_1.forEach((e) => {
-    if (e.classList.contains("btna-1")) {
-        e.addEventListener("mouseenter", buttonAnimation1In);
-        e.addEventListener("mouseout", buttonAnimation1Out)
-        e.appendChild(btn_anim_1_inner);
+let btna1 = gsap.to(".btna1-inner", {
+    duration: 1,
+    paused: true,
+    height: 100,
+    width: 100,
+    scale: 5,
+    ease: "power1.in"
+}); 
+
+btn_elements.forEach((e) => {
+    if (e.classList.contains("btna1")) {
+        e.addEventListener("mouseenter", () => {
+            let inner = e.children[0];
+            inner.style.top = (mY - e.getBoundingClientRect().top) + "%";
+            inner.style.left = (mX - e.getBoundingClientRect().left) + "px";
+            btna1.play();
+        });
+        e.addEventListener("mouseout", () => {
+            btna1.reverse();
+        });
     }
 });
-
-function buttonAnimation1In() {
-    gsap.set(".btna1-inner", {
-        x: e.getBoundingRect.left - mX,
-        y: e.getBoundingRect.top - mY,
-        scale: 0
-    });
-    gsap.to(".btna1-inner", {
-        duration: 0.5,
-        scale: 5,
-        ease: "power4.out",
-        repeatRefresh: true
-    })
-    console.log("entered at: " + mX + ", " + mY);
-}
-
-function buttonAnimation1Out() {
-
-}
