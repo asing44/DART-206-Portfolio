@@ -16,7 +16,6 @@
     --dh: #12754A;
     --a1: #3D315B;
     --a2: #F4AC45;
-
     --b4: 0.26rem;
     --b1: 0.1615rem;
 }
@@ -30,8 +29,7 @@
 html {
     height: 100%;
     width: 100%;
-    font-size: 20px;
-    /* font-size: clamp(0.75rem, 0.95rem + 0.25vw, 1.25rem); */
+    font-size: clamp(0.75rem, 0.5308219178082192rem + 1.095890410958904vw, 1.25rem) !important;
     font-family: 'PT Sans Caption', sans-serif;
     line-height: 1.75rem;
     scroll-behavior: smooth;
@@ -307,9 +305,14 @@ main.hero-main {
 }
 
 .hero-buttons button.down-arrow {
+    position: relative;
     display: flex;
     width: 5.35rem;
     margin-right: 8.62%;
     align-items: center;
     justify-content: center;
+}
+
+#hero-down-arrow {
+    height: 100%;
 }
