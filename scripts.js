@@ -52,3 +52,42 @@
 
 // var testLines = document.getElementsByClassName("--svg-object");
 // console.log(testLines)
+
+var mX = 0;
+var mY = 0;
+
+onmousemove = function(e){
+    mX = e.clientX;
+    mY = e.clientY;
+}
+
+const btn_anim_1 = document.querySelectorAll("button");
+const btn_anim_1_inner = document.createElement("div");
+btn_anim_1_inner.classList.add("btna1-inner");
+
+btn_anim_1.forEach((e) => {
+    if (e.classList.contains("btna-1")) {
+        e.addEventListener("mouseenter", buttonAnimation1In);
+        e.addEventListener("mouseout", buttonAnimation1Out)
+        e.appendChild(btn_anim_1_inner);
+    }
+});
+
+function buttonAnimation1In() {
+    gsap.set(".btna1-inner", {
+        x: e.getBoundingRect.left - mX,
+        y: e.getBoundingRect.top - mY,
+        scale: 0
+    });
+    gsap.to(".btna1-inner", {
+        duration: 0.5,
+        scale: 5,
+        ease: "power4.out",
+        repeatRefresh: true
+    })
+    console.log("entered at: " + mX + ", " + mY);
+}
+
+function buttonAnimation1Out() {
+
+}
