@@ -64,18 +64,23 @@ onmousemove = function(e){
 const btn_elements = document.querySelectorAll("button");
 
 let btna1 = gsap.to(".btna1-inner", {
-    duration: 1,
+    duration: 0.75,
     paused: true,
     height: 100,
     width: 100,
     scale: 5,
-    ease: "power1.in"
+    ease: "power1.in",
 }); 
 
 btn_elements.forEach((e) => {
     if (e.classList.contains("btna1")) {
         e.addEventListener("mouseenter", () => {
-            let inner = e.children[0];
+            let inner;
+            for (var i = 0; i < e.childNodes.length; i++) {
+                if (e.childNodes[i].className == "btna1-inner") {
+                    inner = e.childNodes[i];
+                }
+            }
             inner.style.top = (mY - e.getBoundingClientRect().top) + "%";
             inner.style.left = (mX - e.getBoundingClientRect().left) + "px";
             btna1.play();
