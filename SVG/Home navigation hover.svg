@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="nav_home_hover" data-name="nav_home_hover" xmlns="http://www.w3.org/2000/svg" width="41.62" height="33.16" viewBox="0 0 41.62 33.16">
+  <defs>
+    <style>
+      .uuid-e28cd90a-6674-41be-87f4-a5d412280f6f {
+        fill: #3d315b;
+        stroke: #444144;
+        stroke-miterlimit: 10;
+        stroke-width: 1.61px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-4ee8ef52-4d3b-4fbd-89e7-1baa8970f81f" data-name="Landing - Hero">
+    <rect class="uuid-e28cd90a-6674-41be-87f4-a5d412280f6f" x=".81" y=".81" width="40" height="31.55"/>
+  </g>
+</svg>

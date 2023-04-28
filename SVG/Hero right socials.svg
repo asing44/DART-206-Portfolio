@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="hero_right_socials" data-name="hero_right_socials" xmlns="http://www.w3.org/2000/svg" width="336.08" height="537.34" viewBox="0 0 336.08 537.34">
+  <defs>
+    <style>
+      .uuid-26240d65-132f-4a46-8a7e-83d27ecdd88e {
+        fill: #138385;
+      }
+
+      .uuid-26240d65-132f-4a46-8a7e-83d27ecdd88e, .uuid-10100c73-1e63-4d27-8724-45c0304e42cf, .uuid-8f20ed94-33f1-4c09-9e2a-ebf6eed762dd {
+        stroke: #444144;
+        stroke-miterlimit: 10;
+        stroke-width: 3.23px;
+      }
+
+      .uuid-10100c73-1e63-4d27-8724-45c0304e42cf {
+        fill: #52cc93;
+      }
+
+      .uuid-8f20ed94-33f1-4c09-9e2a-ebf6eed762dd {
+        fill: #3d315b;
+      }
+    </style>
+  </defs>
+  <g id="uuid-52af7937-68d7-4b28-bc9c-7d673ae80fef" data-name="Landing - Hero">
+    <g>
+      <circle class="uuid-10100c73-1e63-4d27-8724-45c0304e42cf" cx="168.04" cy="268.67" r="69.68"/>
+      <circle class="uuid-8f20ed94-33f1-4c09-9e2a-ebf6eed762dd" cx="264.79" cy="466.05" r="69.68"/>
+      <circle class="uuid-26240d65-132f-4a46-8a7e-83d27ecdd88e" cx="71.29" cy="71.29" r="69.68"/>
+    </g>
+  </g>
+</svg>

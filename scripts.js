@@ -53,6 +53,8 @@
 // var testLines = document.getElementsByClassName("--svg-object");
 // console.log(testLines)
 
+// Mouse movemement
+
 var mX = 0;
 var mY = 0;
 
@@ -60,6 +62,8 @@ onmousemove = function(e){
     mX = e.clientX;
     mY = e.clientY;
 }
+
+// Button animation 1
 
 const btn_elements = document.querySelectorAll("button");
 
@@ -90,3 +94,5 @@ btn_elements.forEach((e) => {
         });
     }
 });
+
+// Hero navigation hover animations

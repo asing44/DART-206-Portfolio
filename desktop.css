@@ -223,12 +223,26 @@ main.hero-main {
 }
 
 .hero-nav-link-list li {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 19%;
     font-weight: 600;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hero-nav-link-list li:hover .nav-link-hover-container {
+    top: 0;
+}
+
+.nav-link-hover-container {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    transition: top 400ms ease-in-out;
 }
 
 .nav-link {
@@ -266,30 +280,37 @@ main.hero-main {
     align-items: end;
 }
 
-.hero-buttons button {
+.hero-buttons .button-wrap{
+    position: relative;
+    height: 100%;
+}
+
+.button-wrap.down-arrow-wrap {
+    margin-right: 8.62%;
+}
+
+.hero-buttons .button-wrap::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: calc(100% + var(--b1));
+    width: calc(100% + var(--b1));
+    background-color: transparent;
+    border: var(--b1) solid var(--dark);
+    border-top-width: 0;
+    border-right-width: 0;
+    transform-origin: top right;
+}
+
+.hero-buttons .button-wrap button {
     position: relative;
     height: 2.6rem;
     background-color: transparent;
     border: var(--b1) solid var(--dark);
     font-size: var(--fs0);
     color: var(--light);
-}
-
-.hero-buttons button::after {
-    position: absolute;
-    content: "";
-    top: calc(-1 * var(--b1));
-    right: calc(-1 * var(--b1));
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    border: var(--b1) solid var(--dark);
-    border-top-width: 0;
-    border-right-width: 0;
-    transform: 
-        scaleX(1.13)
-        scaleY(1.3);
-    transform-origin: top right;
+    z-index: 1;
 }
 
 .hero-buttons button.contact {
@@ -298,21 +319,39 @@ main.hero-main {
     border-radius: 5%;
 }
 
-.hero-buttons button.contact::after {
-    transform: 
-        scaleX(1.08)
-        scaleY(1.3);
+.hero-buttons button.contact:hover {
+    color: var(--dh);
 }
 
 .hero-buttons button.down-arrow {
     position: relative;
     display: flex;
     width: 5.35rem;
-    margin-right: 8.62%;
     align-items: center;
     justify-content: center;
 }
 
 #hero-down-arrow {
     height: 100%;
+}
+
+section.hero-right {
+    position: relative;
+    grid-area: span 2 / 2;
+}
+
+.hero-right .triangle-top {
+    position: absolute;
+    right: calc(-1 * var(--b4));
+    top: calc(-1 * var(--b4));
+    height: 100%;
+    width: 100%;
+}
+
+.hero-right .triangle-bottom {
+    position: absolute;
+    right: calc(-1 * var(--b4));
+    bottom: calc(-1 * var(--b4));
+    height: 38.24%;
+    width: 61.94% ;
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="hero_right_triangle_bottom" data-name="hero_right_triangle_bottom" xmlns="http://www.w3.org/2000/svg" width="395.99" height="308.94" viewBox="0 0 395.99 308.94">
+  <defs>
+    <style>
+      .uuid-ce4d880c-0bdd-4104-9424-3fcc395552d6 {
+        fill: #444144;
+      }
+
+      .uuid-997ea3f8-a2a3-49b1-b35d-5d4dcb741acd {
+        fill: #138385;
+      }
+    </style>
+  </defs>
+  <g id="uuid-4cc286ff-b927-4aad-b09a-640085194393" data-name="Landing - Hero">
+    <g>
+      <polygon class="uuid-997ea3f8-a2a3-49b1-b35d-5d4dcb741acd" points="390.07 10.66 15.13 302.81 390.76 303.71 390.07 10.66"/>
+      <path class="uuid-ce4d880c-0bdd-4104-9424-3fcc395552d6" d="m395.26,0L0,307.99l393.37.95h2.62s-.73-308.94-.73-308.94Zm-5.19,10.66l.7,293.06-375.63-.9L390.07,10.66Z"/>
+    </g>
+  </g>
+</svg>
