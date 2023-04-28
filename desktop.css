@@ -137,6 +137,14 @@ button {
     overflow: hidden;
 }
 
+main {
+    position: relative;
+    height: 88%;
+    width: 85%;
+    margin: 0 auto;
+    background-color: var(--section-background);
+    border: var(--b4) solid var(--dark);
+}
 
 /* Media breakpoints */
 
@@ -178,6 +186,14 @@ button {
     color: var(--accent2);
 }
 
+/* Sticky elements */
+
+.sticky-contact {
+    position: absolute;
+    right: 0;
+}
+#sticky_contact circle.sticky-contact-inner-circle {
+}
 
 /* Section - Hero */
 
@@ -340,12 +356,56 @@ section.hero-right {
     grid-area: span 2 / 2;
 }
 
+.hero-right .socials {
+    position: absolute;
+    display: flex;
+    height: 83.40%;
+    width: 57.17%;
+    bottom: 0;
+    left: 4.3%;
+    flex-direction: column;
+    row-gap: 8.75%;
+}
+
+.socials .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.95rem;
+    width: 6.95rem;
+    border: var(--b4) solid var(--dark);
+    border-radius: 50%;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+.social-link.GitHub {
+    align-self: flex-start;
+    background-color: var(--pr);
+}
+
+.social-link.LinkedIn {
+    align-self: center;
+    background-color: var(--lh);
+}
+
+.social-link.Instagram {
+    align-self: flex-end;
+    background-color: var(--a1);
+}
+
+.fa-brands {
+    font-size: var(--fs3);
+    color: var(--light);
+}
+
 .hero-right .triangle-top {
     position: absolute;
     right: calc(-1 * var(--b4));
     top: calc(-1 * var(--b4));
     height: 100%;
     width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 61% 100%);
 }
 
 .hero-right .triangle-bottom {
@@ -354,4 +414,15 @@ section.hero-right {
     bottom: calc(-1 * var(--b4));
     height: 38.24%;
     width: 61.94% ;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+/* Section - Skills */
+
+section.skills {
+    width: 100%;
+}
+
+section.skills main {
+    height: 100vh;
 }
