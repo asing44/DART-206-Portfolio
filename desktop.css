@@ -20,7 +20,7 @@
     --b1: 0.1615rem;
 }
 
-/* Global */
+/* ----------------------Global */
 
 * {
     box-sizing: border-box;
@@ -147,9 +147,9 @@ main {
     border: var(--b4) solid var(--dark);
 }
 
-/* Media breakpoints */
+/* ----------------------Media queries */
 
-/* Button animations */
+/* ----------------------Button animations */
 
 .btna1 {
     z-index: 1;
@@ -171,7 +171,7 @@ main {
     z-index: -1;
 }
 
-/* Cursor */
+/* ----------------------Cursor */
 
 #cursor {
     position: fixed;
@@ -181,13 +181,33 @@ main {
     z-index: 100;
 }
 
-/* Global elements */
+/* ----------------------Global elements */
 
 .inline-highlight {
-    color: var(--accent2);
+    text-decoration-line: underline;
+    text-decoration-thickness: var(--b4);
+    text-decoration-color: var(--a2);
 }
 
-/* Sticky elements */
+.subheading-line {
+    display: inline-block;
+    height: 0.15rem;
+    width: 4rem;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--dh);
+}
+
+section.section-block {
+    width: 100%;
+}
+
+main.section-main {
+    display: grid;
+    height: 100%;
+}
+
+/* ----------------------Sticky elements */
 
 .sticky-contact {
     position: absolute;
@@ -212,7 +232,7 @@ main {
     }
 }
 
-/* Section - Hero */
+/* ----------------------Section - Hero */
 
 section.hero {
     height: 100vh;
@@ -434,17 +454,16 @@ section.hero-right {
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
-/* Section - Skills */
+/* ----------------------Section - Skills */
 
 section.skills {
-    height: 140vh;
     width: 100%;
 }
 
 section.skills .skills-main {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 53.87fr 59.8fr;
+    grid-template-rows: 53.87% 1fr;
 }
 
 .skills-main .skills-top {
@@ -457,13 +476,15 @@ section.skills .skills-main {
 .skills-top .skills-top-wrap {
     position: relative;
     display: flex;
-    top: 19%;
-    left: 7%;
+    width: 100%;
+    padding: 5% 7%;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
 .skills-h2 {
+    display: inline-flex;
+    align-items: center;
     margin-top: 1.75rem;
     margin-bottom: 0;
     color: var(--dh);
@@ -490,8 +511,14 @@ section.skills .skills-main {
 
 .skills-top-triangle {
     position: absolute;
+    width: 24%;
     right: calc(-1 * var(--b4));
     top: calc(-1 * var(--b4));
+}
+
+#skills_top_right_triangle {
+    height: 100%;
+    width: 100%;
 }
 
 .skills-main .skills-bottom {
@@ -505,7 +532,6 @@ section.skills .skills-main {
     display: flex;
     align-items: center;
     column-gap: 7%;
-    height: 71.48%;
     width: 72%;
     perspective: 2000px;
 }
@@ -513,7 +539,7 @@ section.skills .skills-main {
 .skill {
     position: relative;
     height: 100%;
-    width: 26.20%;
+    width: 100%;
     flex: 1;
     transition: transform 250ms ease-in-out;
     cursor: pointer;
@@ -582,4 +608,9 @@ section.skills .skills-main {
     opacity: 100%;;
 }
 
+/* ----------------------Section - About me */
+
+main.about-me-main {
+    background-color: var(--dark);
+}
 
