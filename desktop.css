@@ -521,3 +521,36 @@ section.skills .skills-main {
     border: var(--b1) solid var(--dark);
     background-color: var(--background);
 }
+
+.skill-triangle {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.skill-tbr {
+    right: -15%;
+    bottom: -15%;
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.skill:hover .skill-tbr {
+    right: 0;
+    bottom: 0;
+    opacity: 100%;
+}
+
+.skill-ttl {
+    top: -15%;
+    left: -15%;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.skill:hover .skill-ttl {
+    top: 0;
+    left: 0;
+    opacity: 100%;;
+}
+
+
