@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-0d22a3de-b187-4201-9c5f-f1c1ec1b1d64" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="81.74" height="100.61" viewBox="0 0 81.74 100.61">
+  <defs>
+    <style>
+      .uuid-856f3169-147c-410a-8374-23ccb79bd38e {
+        fill: #138385;
+        stroke: #444144;
+        stroke-miterlimit: 10;
+        stroke-width: 3.23px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-b631a27c-bf11-44c8-be3e-cdefa14fccf6" data-name="Landing - Skills">
+    <polygon class="uuid-856f3169-147c-410a-8374-23ccb79bd38e" points="80.12 4.55 80.12 99 3.39 99 80.12 4.55"/>
+  </g>
+</svg>
