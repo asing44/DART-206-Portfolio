@@ -191,9 +191,25 @@ main {
 
 .sticky-contact {
     position: absolute;
-    right: 0;
+    top: 1rem;
+    right: 0.75rem;
+    cursor: pointer;
+    z-index: 50;
 }
-#sticky_contact circle.sticky-contact-inner-circle {
+
+#sticky_contact_outer {
+    transform-origin: center;
+    animation: contactCircleRotate 20s infinite linear both;
+}
+
+@keyframes contactCircleRotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }
 
 /* Section - Hero */
@@ -501,6 +517,19 @@ section.skills .skills-main {
     flex: 1;
     transition: transform 250ms ease-in-out;
     cursor: pointer;
+}
+
+.skill::before {
+    position: absolute;
+    content: "";
+    height: 76.25%;
+    width: 76.25%;
+    bottom: -1.90%;
+    left: -2.31%;
+    background-color: transparent;
+    border: var(--b1) solid var(--dark);
+    border-top-style: hidden;
+    border-right-style: hidden;
 }
 
 .skill:hover {
