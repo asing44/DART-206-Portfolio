@@ -202,7 +202,7 @@ section.section-block {
     width: 100%;
 }
 
-main.section-main {
+.section-main {
     display: grid;
     height: 100%;
 }
@@ -210,9 +210,9 @@ main.section-main {
 /* ----------------------Sticky elements */
 
 .sticky-contact {
-    position: absolute;
-    top: 1rem;
-    right: 0.75rem;
+    position: fixed;
+    top: 45vh;
+    right: 0.7rem;
     cursor: pointer;
     z-index: 50;
 }
@@ -298,6 +298,13 @@ main.hero-main {
     top: -2%;
 }
 
+.nav-link-hover-container[class~="active"] + a[class~="nav-link"] {
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: var(--b4);
+    text-decoration-color: var(--a2);
+}
+
 .nav-link {
     margin-top: 1rem;
     color: var(--dark);
@@ -320,7 +327,7 @@ main.hero-main {
 
 .hero-content h1 {
     margin-top: 0;
-    color: var(--pr);
+    color: var(--dark);
 }
 
 .hero-content p {
@@ -336,10 +343,6 @@ main.hero-main {
 .hero-buttons .button-wrap{
     position: relative;
     height: 100%;
-}
-
-.button-wrap.down-arrow-wrap {
-    margin-right: 8.62%;
 }
 
 .hero-buttons .button-wrap::after {
@@ -362,30 +365,26 @@ main.hero-main {
     background-color: transparent;
     border: var(--b1) solid var(--dark);
     font-size: var(--fs0);
-    color: var(--light);
-    z-index: 1;
 }
 
 .hero-buttons button.contact {
     width: 8.7rem;
     background-color: var(--dh);
     border-radius: 5%;
+    color: var(--light);
 }
 
 .hero-buttons button.contact:hover {
     color: var(--dh);
 }
 
-.hero-buttons button.down-arrow {
+.see-more-button {
     position: relative;
     display: flex;
     width: 5.35rem;
     align-items: center;
     justify-content: center;
-}
-
-#hero-down-arrow {
-    height: 70%;
+    color: var(--dh)
 }
 
 section.hero-right {
@@ -530,9 +529,10 @@ section.skills .skills-main {
 
 .skills-bottom .skills-container {
     display: flex;
+    width: 72%;
+    padding-bottom: 10%;
     align-items: center;
     column-gap: 7%;
-    width: 72%;
     perspective: 2000px;
 }
 
@@ -548,10 +548,10 @@ section.skills .skills-main {
 .skill::before {
     position: absolute;
     content: "";
-    height: 76.25%;
+    height: 74.8%;
     width: 76.25%;
-    bottom: -1.90%;
-    left: -2.31%;
+    bottom: 0;
+    left: -2.75%;
     background-color: transparent;
     border: var(--b1) solid var(--dark);
     border-top-style: hidden;
@@ -591,7 +591,7 @@ section.skills .skills-main {
 
 .skill:hover .skill-tbr {
     right: 0;
-    bottom: 0;
+    bottom: 2.50%;
     opacity: 100%;
 }
 
@@ -610,7 +610,13 @@ section.skills .skills-main {
 
 /* ----------------------Section - About me */
 
+.about-me {
+    height: 100vh;
+    width: 100%;
+}
+
 main.about-me-main {
+    height: 100vh;
     background-color: var(--dark);
 }
 
