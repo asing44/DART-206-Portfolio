@@ -457,22 +457,45 @@ section.skills {
 
 .skills-top {
     position: relative;
-    height: fit-content;
-    width: 100%;
     padding: 2% 6.25%;
     grid-area: 1 / 1;
 }
 
 .content-wrap-skills {
     position: relative;
-    display: flex;
-    width: 100%;
+    display: inline-flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    z-index: 1;
+}
+
+.content-wrap-skills::before {
+    position: absolute;
+    content: "";
+    top: -5%;
+    left: -5%;
+    height: 115%;
+    width: 90%;
+    border-radius: 1rem;
+    background-color: var(--background);
+    z-index: -1;
+}
+
+.content-wrap-skills::after {
+    position: absolute;
+    content: "";
+    top: 5%;
+    left: -6%;
+    height: 110%;
+    width: 90%;
+    border-radius: 1rem;
+    background-color: var(--dark);
+    z-index: -2;
 }
 
 .skills-h2 {
     display: inline-flex;
+    width: fit-content;
     align-items: center;
     margin-top: 1.75rem;
     margin-bottom: 0;
@@ -484,6 +507,8 @@ section.skills {
 }
 
 .skills-h3 {
+    display: inline-block;
+    width: fit-content;
     margin-top: 0;
     margin-bottom: 1.76rem;
     order: 2;
@@ -495,6 +520,7 @@ section.skills {
 
 .skills-content {
     order: 3;
+    width: fit-content;
     max-width: 40%;
 }
 
@@ -503,16 +529,19 @@ section.skills {
     width: 24%;
     right: calc(-1 * var(--b4) + 2rem);
     top: calc(-1 * var(--b4));
+    z-index: 2;
 }
 
-.skills-main .skills-bottom {
+.skills-bottom {
     position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    padding-top: 5%;
+    z-index: 2;
 }
 
-.skills-bottom .skills-container {
+.skills-container {
     display: flex;
     width: 72%;
     padding-bottom: 10%;

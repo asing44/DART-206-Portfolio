@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+
 // Page detection
 
 var currentPage = window.location.pathname;
@@ -23,6 +24,7 @@ onmousemove = function(e){
 }
 
 // Page animation
+
 let pt1 = gsap.timeline({
     scrollTrigger: {
         trigger: ".about-me",
