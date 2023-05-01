@@ -227,12 +227,6 @@ section.section-block {
     height: 100%;
 }
 
-.content-wrap::before {
-    position: absolute;
-    content: "",
-
-}
-
 .button-wrap {
     position: relative;
     display: inline-block;
@@ -342,23 +336,49 @@ main.hero-main {
     position: relative;
     height: 100%;
     width: 100%;
+    padding: 5% 5%;
     grid-area: 2 / 1;
 }
 
-.hero-content {
+.content-wrap-hero {
     position: relative;
     top: 4.78%;
     left: 11.43%;
-    height: 57.35%;
     max-width: 65.38%;
+    z-index: 1;
 }
 
-.hero-content h1 {
+.content-wrap-hero::after {
+    position: absolute;
+    content: "";
+    top: -5%;
+    left: -10%;
+    height: 115%;
+    width: 115%;
+    border-radius: 1rem;
+    background-color: var(--background);
+    z-index: -1;
+}
+
+
+.content-wrap-hero::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    height: 112%;
+    width: 112%;
+    border-radius: 1rem;
+    background-color: var(--dark);
+    z-index: -1;
+}
+
+.content-wrap-hero h1 {
     margin-top: 0;
     color: var(--a3);
 }
 
-.hero-content p {
+.content-wrap-hero p {
     font-size: 1.2rem;
 }
 
@@ -388,29 +408,6 @@ main.hero-main {
 section.hero-right {
     position: relative;
     grid-area: span 2 / 2;
-}
-
-.hero-right .socials {
-    position: absolute;
-    display: flex;
-    height: 83.40%;
-    width: 57.17%;
-    bottom: 0;
-    left: 4.3%;
-    flex-direction: column;
-    row-gap: 8.75%;
-}
-
-.socials .social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 6.95rem;
-    width: 6.95rem;
-    border: var(--b4) solid var(--dark);
-    border-radius: 50%;
-    box-sizing: content-box;
-    cursor: pointer;
 }
 
 .social-link.GitHub {
@@ -452,24 +449,24 @@ section.skills {
     width: 100%;
 }
 
-section.skills .skills-main {
+.skills-main {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 53.87% 1fr;
 }
 
-.skills-main .skills-top {
+.skills-top {
     position: relative;
-    width: 100%;
     height: fit-content;
+    width: 100%;
+    padding: 2% 6.25%;
     grid-area: 1 / 1;
 }
 
-.skills-top .skills-top-wrap {
+.content-wrap-skills {
     position: relative;
     display: flex;
     width: 100%;
-    padding: 5% 7%;
     flex-direction: column;
     flex-wrap: nowrap;
 }
