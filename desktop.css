@@ -16,19 +16,21 @@
     --dh: #12754A;
     --a1: #3D315B;
     --a2: #F4AC45;
+    --a3: #BB4430;
     --b4: 0.26rem;
     --b1: 0.1615rem;
 }
 
 /* ----------------------Global */
 
-* {
+*, ::before, ::after {
     box-sizing: border-box;
 }
 
 html {
     height: 100%;
     width: 100%;
+    font-size: 125%;
     font-size: clamp(0.75rem, 0.5308219178082192rem + 1.095890410958904vw, 1.25rem) !important;
     font-family: 'PT Sans Caption', sans-serif;
     line-height: 1.75rem;
@@ -135,7 +137,6 @@ a, input, button {
 
 button {
     padding: 0;
-    overflow: hidden;
 }
 
 main {
@@ -152,23 +153,35 @@ main {
 /* ----------------------Button animations */
 
 .btna1 {
-    z-index: 1;
+    position: relative;
+    border: none;
     color: var(--light);
-    transition: color 250ms ease-in-out;
+    font-size: var(--fs0);
+    z-index: 1;
+}
+
+.button-wrap.a1::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark);
+    transform-origin: top left;
+    transform: translate(-3.47%, 11.25%);
+    transition: all 250ms;
 }
 
 .btna1:hover {
+    border: var(--b1) solid var(--a3);
+    background-color: var(--section-background);
     color: var(--dh);
 }
 
-.btna1-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    background-color: var(--light);
-    transform-origin: center;
-    z-index: -1;
+.button-wrap.a1:hover::after {
+    transform: translate(3.47%, -11.25%);
 }
 
 /* ----------------------Cursor */
@@ -183,10 +196,17 @@ main {
 
 /* ----------------------Global elements */
 
-.inline-highlight {
+.inline-highlight1 {
     text-decoration-line: underline;
     text-decoration-thickness: var(--b4);
     text-decoration-color: var(--a2);
+}
+
+.inline-highlight2 {
+    text-decoration-line: underline;
+    text-underline-offset: 25%;
+    text-decoration-thickness: var(--b4);
+    text-decoration-color: var(--a3);
 }
 
 .subheading-line {
@@ -195,7 +215,7 @@ main {
     width: 4rem;
     margin-left: 0.5rem;
     border-radius: 1rem;
-    background-color: var(--dh);
+    background-color: var(--a3);
 }
 
 section.section-block {
@@ -207,29 +227,37 @@ section.section-block {
     height: 100%;
 }
 
+.content-wrap::before {
+    position: absolute;
+    content: "",
+
+}
+
+.button-wrap {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
 /* ----------------------Sticky elements */
+
+.pagination {
+    position: fixed;
+    top: 16.95vh;
+    left: 2.94vw;
+    z-index: 100;
+}
+
+.pagination-button {
+    cursor: pointer;
+}
 
 .sticky-contact {
     position: fixed;
     top: 45vh;
-    right: 0.7rem;
+    right: 0;
     cursor: pointer;
     z-index: 50;
-}
-
-#sticky_contact_outer {
-    transform-origin: center;
-    animation: contactCircleRotate 20s infinite linear both;
-}
-
-@keyframes contactCircleRotate {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    100% {
-        transform: rotate(360deg)
-    }
 }
 
 /* ----------------------Section - Hero */
@@ -243,7 +271,7 @@ main.hero-main {
     position: relative;
     display: grid;
     grid-template-rows: 11.45% 1fr;
-    grid-template-columns: 1fr clamp(38.22%, 32.71vw, 52.65%);
+    grid-template-columns: 2fr 1.75fr;
     height: 88%;
     width: 85%;
     margin: 6vh auto;
@@ -319,72 +347,42 @@ main.hero-main {
 
 .hero-content {
     position: relative;
-    height: 57.35%;
-    max-width: 65.38%;
     top: 4.78%;
     left: 11.43%;
+    height: 57.35%;
+    max-width: 65.38%;
 }
 
 .hero-content h1 {
     margin-top: 0;
-    color: var(--dark);
+    color: var(--a3);
 }
 
 .hero-content p {
     font-size: 1.2rem;
 }
 
-.hero-buttons {
-    position: relative;
-    display: flex;
-    align-items: end;
-}
-
-.hero-buttons .button-wrap{
-    position: relative;
-    height: 100%;
-}
-
-.hero-buttons .button-wrap::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    height: calc(100% + var(--b1));
-    width: calc(100% + var(--b1));
-    background-color: transparent;
-    border: var(--b1) solid var(--dark);
-    border-top-width: 0;
-    border-right-width: 0;
-    transform-origin: top right;
-}
-
-.hero-buttons .button-wrap button {
-    position: relative;
-    height: 2.6rem;
-    background-color: transparent;
-    border: var(--b1) solid var(--dark);
-    font-size: var(--fs0);
-}
-
-.hero-buttons button.contact {
+.contact {
     width: 8.7rem;
-    background-color: var(--dh);
+    height: 2.6rem;
+    background-color: var(--a3);
     border-radius: 5%;
     color: var(--light);
+    z-index: 1;
 }
 
-.hero-buttons button.contact:hover {
-    color: var(--dh);
+.contact:hover {
+    color: var(--a3);
 }
 
-.see-more-button {
-    position: relative;
-    display: flex;
-    width: 5.35rem;
-    align-items: center;
-    justify-content: center;
-    color: var(--dh)
+.hero-content-background {
+    position: absolute;
+    top: -2%;
+    left: 2%;
+    transform: 
+        scaleY(1.2)
+        scale(0.85);
+    transform-origin: top left;
 }
 
 section.hero-right {
@@ -435,22 +433,17 @@ section.hero-right {
     color: var(--light);
 }
 
-.hero-right .triangle-top {
+.hero-right-SVG {
     position: absolute;
     right: calc(-1 * var(--b4));
     top: calc(-1 * var(--b4));
-    height: 100%;
-    width: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 61% 100%);
+    height: calc(100% + var(--b4) * 2);
+    width: calc(100% + var(--b4));
 }
 
-.hero-right .triangle-bottom {
-    position: absolute;
-    right: calc(-1 * var(--b4));
-    bottom: calc(-1 * var(--b4));
-    height: 38.24%;
-    width: 61.94% ;
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+#hero_right_SVG {
+    height: 100%;
+    width: 100%;
 }
 
 /* ----------------------Section - Skills */
@@ -486,7 +479,7 @@ section.skills .skills-main {
     align-items: center;
     margin-top: 1.75rem;
     margin-bottom: 0;
-    color: var(--dh);
+    color: var(--a3);
     line-height: 3.5rem;
     font-size: var(--fs1);
     font-family: var(--font2);
@@ -508,16 +501,11 @@ section.skills .skills-main {
     max-width: 40%;
 }
 
-.skills-top-triangle {
+.skills-top-SVG {
     position: absolute;
     width: 24%;
-    right: calc(-1 * var(--b4));
+    right: calc(-1 * var(--b4) + 2rem);
     top: calc(-1 * var(--b4));
-}
-
-#skills_top_right_triangle {
-    height: 100%;
-    width: 100%;
 }
 
 .skills-main .skills-bottom {
