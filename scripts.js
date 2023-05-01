@@ -29,7 +29,6 @@ let pt1 = gsap.timeline({
         start: "top center",
         end: "top top",
         scrub: 4,
-        markers: true,
     },
 });
 
@@ -45,33 +44,30 @@ pt1.fromTo(".about-me-main", {
 
 // Button animation 1
 
-const btn_elements = document.querySelectorAll("button");
+// var btn_elements = document.querySelectorAll(".btna1");
 
-let btna1 = gsap.to(".btna1-inner", {
-    duration: 0.75,
-    paused: true,
-    height: 100,
-    width: 100,
-    scale: 5,
-    ease: "power1.in",
-}); 
+// btn_elements.forEach(e => {
 
-btn_elements.forEach((e) => {
-    if (e.classList.contains("btna1")) {
-        e.addEventListener("mouseenter", () => {
-            let inner;
-            for (var i = 0; i < e.childNodes.length; i++) {
-                if (e.childNodes[i].className == "btna1-inner") {
-                    inner = e.childNodes[i];
-                }
-            }
-            inner.style.top = (mY - e.getBoundingClientRect().top) + "%";
-            inner.style.left = (mX - e.getBoundingClientRect().left) + "px";
-            btna1.play();
-        });
-        e.addEventListener("mouseout", () => {
-            btna1.reverse();
-        });
-    }
-});
+//     var btn_inner = document.createElement("div");
+//     btn_inner.className = "btna1-inner"
+//     e.appendChild(btn_inner);
+
+//     t1 = gsap.timeline(e, {duration: 2});
+//     t1.pause();
+
+//     t1.to(".btna1-inner", {
+//         height: "200%",
+//         width: "200%",
+//         y: -50,
+//         opacity: 100
+//     });
+
+//     e.addEventListener("mouseenter", () => {
+//         t1.play()
+//     })
+
+//     e.addEventListener("mouseout", () => {
+//         t1.reverse()
+//     })
+// })
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="skills_top_SVG" data-name="skills_top_SVG" xmlns="http://www.w3.org/2000/svg" width="516.57" height="506.16" viewBox="0 0 516.57 506.16">
+  <defs>
+    <style>
+      .uuid-0917054e-8429-4dac-826d-2a44d0b64c31 {
+        fill: #3d315b;
+      }
+
+      .uuid-0917054e-8429-4dac-826d-2a44d0b64c31, .uuid-a8a7609d-c524-4366-968e-a6532577df93, .uuid-42e255cf-0d5e-4ce8-b724-c70a6289ca66 {
+        stroke: #444144;
+        stroke-miterlimit: 10;
+        stroke-width: 5.22px;
+      }
+
+      .uuid-a8a7609d-c524-4366-968e-a6532577df93 {
+        fill: #f4ac45;
+      }
+
+      .uuid-42e255cf-0d5e-4ce8-b724-c70a6289ca66 {
+        fill: #138385;
+      }
+    </style>
+  </defs>
+  <g id="uuid-7859a16b-0065-4cb7-9e17-3935ae074e94" data-name="Landing - Skills">
+    <g>
+      <rect class="uuid-0917054e-8429-4dac-826d-2a44d0b64c31" x="214.81" y="2.61" width="265.21" height="265.21"/>
+      <rect class="uuid-42e255cf-0d5e-4ce8-b724-c70a6289ca66" x="125.59" y="149.53" width="252.11" height="252.11"/>
+      <rect class="uuid-42e255cf-0d5e-4ce8-b724-c70a6289ca66" x="329.7" y="234.13" width="111.48" height="111.48"/>
+      <rect class="uuid-0917054e-8429-4dac-826d-2a44d0b64c31" x="63.31" y="128.84" width="187.83" height="187.83"/>
+      <rect class="uuid-a8a7609d-c524-4366-968e-a6532577df93" x="329.7" y="319.29" width="184.26" height="184.26"/>
+      <rect class="uuid-a8a7609d-c524-4366-968e-a6532577df93" x="127.04" y="364.28" width="114.49" height="114.49"/>
+      <rect class="uuid-42e255cf-0d5e-4ce8-b724-c70a6289ca66" x="2.61" y="287.08" width="154.41" height="154.41"/>
+    </g>
+  </g>
+</svg>

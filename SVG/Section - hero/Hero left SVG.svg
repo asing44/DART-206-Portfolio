@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="hero_left_SVG" data-name="hero_left_SVG" xmlns="http://www.w3.org/2000/svg" width="844.32" height="653.72" viewBox="0 0 844.32 653.72">
+  <defs>
+    <style>
+      .uuid-22ec43bb-cf3f-4dad-a0b2-27d387f19f21 {
+        fill: #fbedda;
+        opacity: .7;
+        stroke: #444144;
+        stroke-miterlimit: 10;
+        stroke-width: 1.61px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-937827d0-19b8-4ea6-b10b-9563d3a1bb30" data-name="Landing - Hero">
+    <polygon class="uuid-22ec43bb-cf3f-4dad-a0b2-27d387f19f21" points="843.51 98.68 824.26 98.68 824.26 32.7 661.3 32.7 661.3 .81 415.35 .81 415.35 32.7 315.4 32.7 315.4 55.22 93.75 55.22 93.75 115.89 57.56 115.89 57.56 300.69 93.75 300.69 93.75 353.19 .81 353.19 .81 537.99 180.54 537.99 180.54 589.62 295.35 589.62 295.35 652.92 766.89 652.92 766.89 490.2 784.28 490.2 784.28 367.08 824.26 367.08 824.26 283.48 843.51 283.48 843.51 98.68"/>
+  </g>
+</svg>
